@@ -1,0 +1,13 @@
+version: '2'
+services:
+  jenkins:
+    image: 'cichockimc/jenkins:latest'
+    ports:
+      - '8080:8080'
+      - '443:8443'
+      - '50000:50000'
+    volumes:
+      - '/c/Users/myself/Projects/jenkins/jenkins_data:/var/jenkins_home'
+volumes:
+  jenkins_data:
+    driver: local
